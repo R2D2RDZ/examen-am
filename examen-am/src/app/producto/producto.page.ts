@@ -26,4 +26,8 @@ export class ProductoPage implements OnInit {
     this.productoService.addProducto(producto);
   }
 
+  Modificar(id:number ){
+    console.log(id);
+  }
+
 }

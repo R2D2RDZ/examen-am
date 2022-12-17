@@ -27,4 +27,13 @@ export class DetalleProductoPage implements OnInit {
     });
   }
 
+  Modificar(){
+    console.log(this.idProducto);
+    this.productoService.setProducto(this.idProducto,this.producto.categoria,this.producto.descripcion,this.producto.sku);
+  }
+
+  Eliminar(){
+    this.productoService.delProducto(this.idProducto);
+  }
+
 }

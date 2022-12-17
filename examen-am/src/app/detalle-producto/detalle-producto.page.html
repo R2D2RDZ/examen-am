@@ -10,16 +10,18 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label>Descripcion</ion-label>
-      <p>{{producto.descripcion}}</p>
+      <ion-label position="floating">Descripcion</ion-label>
+      <ion-input [(ngModel)] = "producto.descripcion"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Categoria</ion-label>
-      <p>{{producto.categoria}}</p>
+      <ion-label position="floating">SKU</ion-label>
+      <ion-input [(ngModel)] = "producto.sku"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>SKU</ion-label>
-      <p>{{producto.sku}}</p>
+      <ion-label position="floating">Categoria</ion-label>
+      <ion-input [(ngModel)] = "producto.categoria"></ion-input>
     </ion-item>
   </ion-list>
+  <ion-button (click)="Modificar()">Modificar</ion-button>
+  <ion-button (click)="Eliminar()">Eliminar</ion-button>
 </ion-content>
