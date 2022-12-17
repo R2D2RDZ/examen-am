@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let producto of productos">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{producto.id}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{producto.descripcion}}</ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <ion-label position="floating">ID</ion-label>
+    <ion-input [(ngModel)] = "selectedID" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Descripcion</ion-label>
+    <ion-input [(ngModel)] = "selectedDes"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">SKU</ion-label>
+    <ion-input [(ngModel)] = "selectedSKU"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Categoria</ion-label>
+    <ion-input [(ngModel)] = "selectedCat"></ion-input>
+  </ion-item>
+  <ion-button (click)="Agregar()">Agregar</ion-button>
+</ion-content>
