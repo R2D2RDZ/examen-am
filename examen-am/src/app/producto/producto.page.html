@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let producto of productos">
+    <ion-item *ngFor="let producto of productos" [routerLink]="['/detalle-producto', producto.id]">
       <ion-card>
         <ion-card-header>
           <ion-card-title>{{producto.id}}</ion-card-title>

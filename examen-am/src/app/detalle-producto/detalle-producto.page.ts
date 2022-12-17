@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleProductoPage implements OnInit {
 
+  idProducto:number;
+
   constructor() { }
 
   ngOnInit() {
