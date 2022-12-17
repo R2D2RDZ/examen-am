@@ -6,8 +6,7 @@ import { Producto } from '../models/producto.model';
 })
 export class ProductoService {
 
-  productos:Producto[];
-  pro:Producto;
+  productos:Producto[] =[];
 
   constructor() { }
 
