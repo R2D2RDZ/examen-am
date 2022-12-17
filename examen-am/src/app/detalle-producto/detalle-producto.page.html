@@ -1,9 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detalle-producto</ion-title>
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/producto"></ion-back-button>
+  </ion-button>
+    <ion-title>{{producto.id}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item>
+      <ion-label>Descripcion</ion-label>
+      <p>{{producto.descripcion}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categoria</ion-label>
+      <p>{{producto.categoria}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>SKU</ion-label>
+      <p>{{producto.sku}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>

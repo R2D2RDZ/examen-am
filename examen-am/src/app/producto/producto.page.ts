@@ -10,7 +10,6 @@ import { Producto } from '../models/producto.model';
 export class ProductoPage implements OnInit {
 
   productos: Producto[];
-  selectedID: number;
   selectedCat: string;
   selectedSKU: string;
   selectedDes: string;
@@ -23,7 +22,7 @@ export class ProductoPage implements OnInit {
   }
 
   Agregar(){
-    let producto = {id: this.selectedID, categoria: this.selectedCat, sku:this.selectedSKU, descripcion: this.selectedDes};
+    let producto = {id: 0, categoria: this.selectedCat, sku:this.selectedSKU, descripcion: this.selectedDes};
     this.productoService.addProducto(producto);
   }
 

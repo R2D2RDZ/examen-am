@@ -14,12 +14,14 @@ export class ProductoService {
     return this.productos;
   }
 
-  public getProducto(ids:number){
-    return this.productos.find(({ id }) => id === ids);
+  public getProducto(id:number){
+    console.log(id);
+    return this.productos[id-1];
   }
 
   public addProducto(producto: Producto){
     console.log(producto);
+    producto.id = this.productos.length+1;
     this.productos.push(producto);
     console.log(this.productos);
   }
